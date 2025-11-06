@@ -137,3 +137,11 @@ export function downloadReceipt(fileName: string, html: string) {
   a.remove();
   URL.revokeObjectURL(url);
 }
+
+export function openReceiptInNewTab(html: string) {
+  const win = window.open('', '_blank');
+  if (!win) return;
+  win.document.open('text/html');
+  win.document.write(html);
+  win.document.close();
+}
