@@ -225,7 +225,7 @@ export default function ReservationForm() {
           setTimeout(() => {
             setShowSuccess(false);
             navigate('/reservations');
-          }, 2000);
+          }, 6000);
         } catch (error) {
           console.error('Error al crear la reserva:', error);
           setIsSubmitting(false);
